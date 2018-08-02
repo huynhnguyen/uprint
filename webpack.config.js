@@ -15,7 +15,11 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'uprint.js',
+    libraryTarget: 'umd',
+    // These options are useful if the user wants to load the module with AMD
+    library: 'uprint',
+    umdNamedDefine: true
+    // path: path.resolve(__dirname, 'dist')
   }
 };
