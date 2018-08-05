@@ -5,7 +5,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         use: 'ts-loader',
         exclude: /node_modules/
       }
@@ -17,9 +17,6 @@ module.exports = {
   output: {
     filename: 'uprint.js',
     libraryTarget: 'umd',
-    // These options are useful if the user wants to load the module with AMD
-    library: 'uprint',
-    umdNamedDefine: true
-    // path: path.resolve(__dirname, 'dist')
+    globalObject: 'typeof self !== \'undefined\' ? self : this' //OMG: fix windown is not define
   }
 };
