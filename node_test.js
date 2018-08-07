@@ -1,3 +1,3 @@
 var uprint = require('./dist/uprint');
-uprint.uprint('adbc');
-uprint.uprint([[1,2,3],[2,3,4]]);
+uprint.uprint({'a':{'a':'b'}});
+uprint.uprint({'a':[[1,2,3],[2,3,4]]});
